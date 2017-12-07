@@ -456,6 +456,10 @@ var NguiAutoCompleteComponent = (function () {
         __metadata("design:type", Boolean)
     ], NguiAutoCompleteComponent.prototype, "autoSelectFirstItem", void 0);
     __decorate([
+        core_1.Input("filter-from-start"),
+        __metadata('design:type', Boolean)
+    ], Ng2AutoCompleteComponent.prototype, "filterFromStart", void 0);
+    __decorate([
         core_1.Input("select-on-blur"),
         __metadata("design:type", Boolean)
     ], NguiAutoCompleteComponent.prototype, "selectOnBlur", void 0);
@@ -566,6 +570,7 @@ var NguiAutoCompleteDirective = (function () {
             component.acceptUserInput = _this.acceptUserInput;
             component.maxNumList = parseInt(_this.maxNumList, 10);
             component.loadingText = _this.loadingText;
+            component.filterFromStart = _this.filterFromStart;
             component.loadingTemplate = _this.loadingTemplate;
             component.listFormatter = _this.listFormatter;
             component.blankOptionText = _this.blankOptionText;

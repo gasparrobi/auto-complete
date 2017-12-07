@@ -18,6 +18,7 @@ var NguiAutoCompleteComponent = (function () {
         this.minChars = 0;
         this.acceptUserInput = true;
         this.loadingText = "Loading";
+        this.filterFromStart = false;
         this.loadingTemplate = null;
         this.showInputTag = true;
         this.showDropdownOnInit = false;
@@ -223,6 +224,7 @@ var NguiAutoCompleteComponent = (function () {
         'noMatchFoundText': [{ type: core_1.Input, args: ["no-match-found-text",] },],
         'acceptUserInput': [{ type: core_1.Input, args: ["accept-user-input",] },],
         'loadingText': [{ type: core_1.Input, args: ["loading-text",] },],
+        'filterFromStart': [{ type: core_1.Input, args: ["filter-from-start",] },],
         'loadingTemplate': [{ type: core_1.Input, args: ["loading-template",] },],
         'maxNumList': [{ type: core_1.Input, args: ["max-num-list",] },],
         'showInputTag': [{ type: core_1.Input, args: ["show-input-tag",] },],

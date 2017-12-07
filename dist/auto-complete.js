@@ -11,13 +11,13 @@ var NguiAutoComplete = (function () {
         this.http = http;
         // ...
     }
-    NguiAutoComplete.prototype.filter = function (list, keyword, matchFormatted) {
+    NguiAutoComplete.prototype.filter = function (list, keyword, matchFormatted, filterFromStart = false) {
         var _this = this;
         return list.filter(function (el) {
             var objStr = matchFormatted ? _this.getFormattedListItem(el).toLowerCase() : JSON.stringify(el).toLowerCase();
             keyword = keyword.toLowerCase();
             //console.log(objStr, keyword, objStr.indexOf(keyword) !== -1);
-            return objStr.indexOf(keyword) !== -1;
+            return !filterFromStart ? objStr.indexOf(keyword) !== -1 : objStr.replace('"', "").startsWith(keyword);
         });
     };
     NguiAutoComplete.prototype.getFormattedListItem = function (data) {
